@@ -26,5 +26,18 @@ function moveUp(){
         yourShip.style.top = `${position}px`;
     }
 }
+//função descer
+function moveDown(){
+    let topPosition = getComputedStyle(yourShip).getPropertyValue('top');
+    if(topPosition === "500px"){
+        return
+    } else{
+        let position = parseInt(topPosition);
+        position += 50;
+        yourShip.style.top = `${position}px`;
+    }
+}
+
+window.addEventListener('keydown', flyAhip);
 
 
